@@ -1,3 +1,0 @@
-The "output.json" file is a data file, not a code file. It will be generated and filled by the Scrapy spider during its execution. Initially, it will be empty. So, here is the initial state of the "output.json" file:
-
-{}

@@ -1,17 +1,19 @@
-1. **Scrapy**: All the files share the dependency on the Scrapy library, which is used for web scraping in Python. This includes functions, classes, and methods provided by Scrapy.
+1. Scrapy: All the files in the project are dependent on the Scrapy library for Python. This library provides all the necessary tools and functions for web scraping.
 
-2. **RedditScraperItem**: This is a data schema defined in "items.py" that will be used across "reddit_scraper.py" and "reddit_spider.py" to structure the scraped data.
+2. RedditScraperItem: This is a data schema defined in "items.py" and is used in "pypl_spider.py" to structure the scraped data.
 
-3. **JsonWriterPipeline**: This is a pipeline defined in "pipelines.py" that will be used in "reddit_scraper.py" and "settings.py" to handle the storage of scraped data in JSON format.
+3. PyplSpider: This is the main spider class defined in "pypl_spider.py". It is used to perform the actual scraping of data from Reddit.
 
-4. **Settings**: The settings defined in "settings.py" will be used across all the other files to configure the behavior of the Scrapy spider, including the pipeline.
+4. Settings: The "settings.py" file contains settings for the Scrapy project. These settings are used across all other files in the project.
 
-5. **RedditSpider**: This is a spider class defined in "reddit_spider.py" that will be used in "reddit_scraper.py" to handle the actual scraping of data from Reddit.
+5. Middlewares: The "middlewares.py" file contains middleware classes for the Scrapy project. These classes are used in the "settings.py" file and the "pypl_spider.py" file.
 
-6. **DOM Element IDs**: The IDs of the DOM elements that the RedditSpider will interact with on Reddit's web pages. These IDs are shared across "reddit_scraper.py" and "reddit_spider.py".
+6. Pipelines: The "pipelines.py" file contains pipeline classes for the Scrapy project. These classes are used in the "settings.py" file and the "pypl_spider.py" file.
 
-7. **Output.json**: This is the file where the scraped data will be stored in a structured format. It is used in "pipelines.py" and "reddit_scraper.py".
+7. Scrapy.cfg: This is the configuration file for the Scrapy project. It is used by Scrapy to set up and initialize the project.
 
-8. **Function Names**: Functions such as parse, start_requests, etc., defined in "reddit_spider.py" are used in "reddit_scraper.py" to control the flow of the scraping process.
+8. Reddit DOM elements: The "pypl_spider.py" file will need to reference specific DOM elements from Reddit to extract the required data. These might include elements like post titles, post content, post date, etc.
 
-9. **Scrapy Commands**: Commands like crawl, startproject, genspider, etc., are used in "reddit_scraper.py" to control the Scrapy spider and are part of the Scrapy library.
+9. JSON: The scraped data is stored in a structured format in JSON. This format is used in the "pipelines.py" file to store the data.
+
+10. Pagination and dynamic content handling: The "pypl_spider.py" file will need to handle pagination and dynamic content on Reddit. This involves shared functions and methods for navigating through pages and handling dynamic content.

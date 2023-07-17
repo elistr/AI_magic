@@ -1,10 +1,9 @@
 ```python
 import json
 
-class JsonWriterPipeline(object):
-
+class RedditScraperPipeline:
     def open_spider(self, spider):
-        self.file = open('output.json', 'w')
+        self.file = open('items.jl', 'w')
 
     def close_spider(self, spider):
         self.file.close()

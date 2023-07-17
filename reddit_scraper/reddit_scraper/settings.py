@@ -1,8 +1,9 @@
-# Scrapy settings for web_scraper project
-BOT_NAME = 'web_scraper'
+# Scrapy settings for reddit_scraper project
 
-SPIDER_MODULES = ['web_scraper.spiders']
-NEWSPIDER_MODULE = 'web_scraper.spiders'
+BOT_NAME = 'reddit_scraper'
+
+SPIDER_MODULES = ['reddit_scraper.spiders']
+NEWSPIDER_MODULE = 'reddit_scraper.spiders'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -10,7 +11,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'web_scraper.pipelines.JsonWriterPipeline': 1,
+   'reddit_scraper.pipelines.RedditScraperPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
